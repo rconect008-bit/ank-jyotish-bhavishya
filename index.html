@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="mr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="अंक ज्योतिष भविष्य — जन्मतारीख टाका आणि अंकशास्त्रानुसार तुमचा सविस्तर अहवाल मिळवा."
+    />
+    <meta
+      name="keywords"
+      content="अंकशास्त्र, अंक ज्योतिष, जन्मतारीख, जीवनमार्ग, lucky number, मराठी भविष्य"
+    />
+    <meta name="theme-color" content="#0f172a" />
+    <title>अंक ज्योतिष भविष्य</title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" href="/assets/icons/star.svg" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="background-orb orb-1"></div>
+    <div class="background-orb orb-2"></div>
+
+    <header class="topbar glass-card">
+      <a class="brand" href="#home">
+        <span class="brand-mark">✦</span>
+        <span>अंक ज्योतिष भविष्य</span>
+      </a>
+      <div class="topbar-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Theme toggle">🌙</button>
+        <a class="nav-link" href="#results">अहवाल</a>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-content glass-card">
+          <p class="eyebrow">शास्त्रीय मार्गदर्शन • वैयक्तिक अंक विश्लेषण</p>
+          <h1>अंक ज्योतिष भविष्य</h1>
+          <p class="hero-subtitle">
+            जन्मतारीख टाका आणि अंकशास्त्रानुसार तुमचा सविस्तर अहवाल मिळवा.
+          </p>
+
+          <form id="numerologyForm" class="form-card">
+            <label class="field">
+              <span>जन्मतारीख</span>
+              <input id="dob" name="dob" type="date" required />
+            </label>
+            <label class="field">
+              <span>पूर्ण नाव (पर्यायी)</span>
+              <input id="fullName" name="fullName" type="text" placeholder="तुमचे नाव लिहा" />
+            </label>
+            <div class="actions">
+              <button class="btn btn-primary" type="submit">भविष्य पहा</button>
+              <button class="btn btn-secondary" id="resetBtn" type="reset">Reset</button>
+            </div>
+          </form>
+
+          <div class="insights">
+            <div>• जन्मांक</div>
+            <div>• जीवनमार्गांक</div>
+            <div>• शुभांक</div>
+            <div>• सविस्तर जीवनमार्गदर्शन</div>
+          </div>
+        </div>
+
+        <div class="hero-visual glass-card">
+          <img src="/assets/images/hero-illustration.svg" alt="अंक ज्योतिष भविष्य चित्र" />
+          <div class="visual-caption">
+            <h2>आत्मपरिचय, प्रवृत्ती आणि शुभ दिशा</h2>
+            <p>तुमच्या जन्मतारीखावर आधारित वैयक्तिक अंक विश्लेषण.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="results-section" id="results">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">तुमचा सविस्तर अहवाल</p>
+            <h2>अंकशास्त्र विश्लेषण</h2>
+          </div>
+          <div class="search-row">
+            <input id="searchInput" type="search" placeholder="अहवालात शोधा..." />
+            <button class="btn btn-secondary" id="copyBtn" type="button">Copy Result</button>
+            <button class="btn btn-secondary" id="shareBtn" type="button">Share</button>
+            <button class="btn btn-secondary" id="printBtn" type="button">Print</button>
+            <button class="btn btn-secondary" id="pdfBtn" type="button">Download PDF</button>
+          </div>
+        </div>
+
+        <div id="loading" class="loading hidden" aria-live="polite">
+          <div class="spinner"></div>
+          <p>तुमचा अहवाल तयार केला जात आहे...</p>
+        </div>
+
+        <div id="resultContent" class="result-content"></div>
+      </section>
+    </main>
+
+    <footer class="footer glass-card">
+      <p>
+        ही माहिती पारंपरिक अंकशास्त्रावर आधारित असून केवळ माहिती आणि मनोरंजनाच्या उद्देशाने दिली आहे.
+        वैद्यकीय, आर्थिक किंवा कायदेशीर निर्णयांसाठी याचा आधार घेऊ नये.
+      </p>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
